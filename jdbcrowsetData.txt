@@ -1,0 +1,22 @@
+CREATE TABLE employeetable(
+  employee_id numeric NOT Null,
+  employee_name varchar(60) NOT NULL,
+  email varchar(45) NOT NULL,
+  salary numeric(10,2)  default NULL,
+  date_of_joining timestamp default NULL,
+  bonus decimal(10,0) default NULL,
+  PRIMARY KEY  (employee_id)
+) ;
+
+INSERT INTO employeetable 
+VALUES (123,'Martin','martin.cs2017@yahoo.com',71000,'2017-05-17 00:00:00',400);
+
+INSERT INTO employeetable
+VALUES (101,'Paul','paul.cs2017@gmail.com',91000,'2017-05-18 00:00:00',800);
+INSERT INTO employeetable
+VALUES (111,'Sam','sam.cs2014@gmail.com',76000,'2017-05-16 00:00:00',300);
+
+
+
+select * from employeetable
+
