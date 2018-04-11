@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<students xmlns="http://www.example.org/student" 
+       xmlns:ns="http://www.w3.org/2001/XMLSchema-instance" 
+       ns:schemaLocation="http://www.example.org/student student.xsd">
+
+<student id="s123">
+<studentname>
+<firstname>martin</firstname>
+<lastname> Bob</lastname>
+</studentname>
+<DOB>1988-02-16</DOB>
+<grade>B</grade>
+</student>
+
+
+
+</students>

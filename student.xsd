@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/student" 
+xmlns="http://www.example.org/student" elementFormDefault="qualified">
+
+
+<xsd:element name="students" type="students_ty"></xsd:element>
+<xsd:complexType name="students_ty">
+<xsd:sequence>
+<xsd:element name="student" type="student_ty" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="student_ty">
+<xsd:sequence>
+<xsd:element name="studentname">
+<xsd:complexType>
+<xsd:all>
+<xsd:element name="firstname" type="xsd:string"/>
+<xsd:element name="lastname" type="xsd:string"/>
+</xsd:all>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="DOB" type="xsd:date"/>
+<xsd:element name="grade" type="grade_ty"/>
+
+ </xsd:sequence>
+  <xsd:attribute name="id" type="id_ty"/>
+</xsd:complexType>
+
+
+
+<xsd:simpleType name="id_ty">
+
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="[S|s]\d{3}"></xsd:pattern>
+</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="grade_ty">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="A"></xsd:enumeration>
+<xsd:enumeration value="B"></xsd:enumeration>
+<xsd:enumeration value="C"></xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+
+
+</xsd:schema>
+
+
+
+
+
+
+
+
+
+
+
